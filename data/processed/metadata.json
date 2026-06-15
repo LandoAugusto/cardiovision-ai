@@ -1,0 +1,32 @@
+{
+  "dataset": "ECG Heartbeat Categorization Images",
+  "img_size": [
+    224,
+    224
+  ],
+  "output_format": ".jpg",
+  "normalization": "pixel / 255.0 -> [0, 1]",
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "random_state": 42,
+  "class_names": [
+    "batimento_cardiaco_anormal",
+    "historico_pos_infarto",
+    "infarto_do_miocardio",
+    "normal"
+  ],
+  "counts": {
+    "raw": {
+      "batimento_cardiaco_anormal": 233,
+      "historico_pos_infarto": 172,
+      "infarto_do_miocardio": 239,
+      "normal": 284
+    },
+    "train": 649,
+    "validation": 139,
+    "test": 140
+  }
+}

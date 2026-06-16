@@ -1,0 +1,474 @@
+<svg viewBox="0 0 1100 1300" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, Arial, sans-serif">
+
+  <defs>
+    <marker id="arr-blue" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-red" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#f47067"/>
+    </marker>
+    <marker id="arr-green" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#3fb950"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#484f58"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#10161e"/>
+    </linearGradient>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c70040"/>
+      <stop offset="100%" stop-color="#ed145b"/>
+    </linearGradient>
+    <linearGradient id="cnn-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#112240"/>
+      <stop offset="100%" stop-color="#0a192f"/>
+    </linearGradient>
+    <linearGradient id="res-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#112810"/>
+      <stop offset="100%" stop-color="#0a1f09"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="1100" height="1300" fill="url(#bg)"/>
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <rect x="0" y="0" width="1100" height="76" fill="url(#hdr)" filter="url(#shadow)"/>
+  <text x="550" y="33" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="20" font-weight="700" letter-spacing="0.3">
+    🫀  CardioVision AI — Pipeline de Visão Computacional Médica
+  </text>
+  <text x="550" y="59" text-anchor="middle" dominant-baseline="middle"
+        fill="rgba(255,255,255,0.7)" font-size="11.5">
+    Fase 4 · CardioIA: A Nova Era da Cardiologia Inteligente · FIAP · 2026
+  </text>
+
+  <!-- ══════════════════════════════════════════
+       PARTE 1 LABEL
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="88" width="1040" height="22" rx="4" fill="#1c2128"/>
+  <text x="42" y="99" dominant-baseline="middle"
+        fill="#FF9800" font-size="10" font-weight="700" letter-spacing="0.8">
+    PARTE 1 · PRÉ-PROCESSAMENTO E ORGANIZAÇÃO DAS IMAGENS
+  </text>
+  <text x="1058" y="99" text-anchor="end" dominant-baseline="middle"
+        fill="#484f58" font-size="10">
+    ECG Heartbeat Categorization Images (Kaggle · domínio público) · 928 imagens · 4 classes clínicas
+  </text>
+
+  <!-- ── CLASSE CARDS ── -->
+  <!-- Batimento Anormal -->
+  <rect x="30" y="118" width="248" height="74" rx="8" fill="#1f1505" stroke="#FF9800" stroke-width="1.5"/>
+  <rect x="30" y="118" width="248" height="5" rx="4" fill="#FF9800"/>
+  <text x="154" y="144" text-anchor="middle" fill="#FF9800" font-size="10" font-weight="700">BATIMENTO ANORMAL</text>
+  <text x="154" y="166" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="800">233</text>
+  <text x="154" y="183" text-anchor="middle" fill="#6e7681" font-size="9.5">arritmias · distúrbios de condução</text>
+
+  <!-- Pós-Infarto -->
+  <rect x="290" y="118" width="248" height="74" rx="8" fill="#1a0d2e" stroke="#9C27B0" stroke-width="1.5"/>
+  <rect x="290" y="118" width="248" height="5" rx="4" fill="#9C27B0"/>
+  <text x="414" y="144" text-anchor="middle" fill="#CE93D8" font-size="10" font-weight="700">HISTÓRICO PÓS-INFARTO</text>
+  <text x="414" y="166" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="800">172</text>
+  <text x="414" y="183" text-anchor="middle" fill="#6e7681" font-size="9.5">cicatrizes elétricas · risco de recorrência</text>
+
+  <!-- Infarto -->
+  <rect x="550" y="118" width="248" height="74" rx="8" fill="#200b0b" stroke="#f47067" stroke-width="2"/>
+  <rect x="550" y="118" width="248" height="5" rx="4" fill="#f47067"/>
+  <text x="674" y="140" text-anchor="middle" fill="#ffa198" font-size="10" font-weight="700">INFARTO DO MIOCÁRDIO</text>
+  <text x="674" y="156" text-anchor="middle" fill="#ffa198" font-size="8.5">⚠ emergência clínica</text>
+  <text x="674" y="172" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="800">239</text>
+  <text x="674" y="186" text-anchor="middle" fill="#6e7681" font-size="9">elevação de ST · ondas Q patológicas</text>
+
+  <!-- Normal -->
+  <rect x="810" y="118" width="260" height="74" rx="8" fill="#0a1f0a" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="810" y="118" width="260" height="5" rx="4" fill="#3fb950"/>
+  <text x="940" y="144" text-anchor="middle" fill="#7ee787" font-size="10" font-weight="700">NORMAL</text>
+  <text x="940" y="166" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="800">284</text>
+  <text x="940" y="183" text-anchor="middle" fill="#6e7681" font-size="9.5">ritmo sinusal · padrão fisiológico</text>
+
+  <!-- Arrow ── INPUT → PREPROCESSING ── -->
+  <line x1="550" y1="192" x2="550" y2="226" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- ══════════════════════════════════════════
+       PREPROCESSING BOX
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="234" width="1040" height="188" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Tab badge -->
+  <rect x="30" y="222" width="265" height="22" rx="4" fill="#FF9800"/>
+  <text x="162" y="233" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10.5" font-weight="700">📓 NOTEBOOK 01 · Pré-processamento</text>
+
+  <!-- 6 pipeline steps -->
+  <!-- Step 1 -->
+  <rect x="48" y="254" width="148" height="62" rx="6" fill="#1c2128" stroke="#30363d"/>
+  <text x="122" y="274" text-anchor="middle" fill="#58a6ff" font-size="16">①</text>
+  <text x="122" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">Leitura OpenCV</text>
+  <text x="122" y="306" text-anchor="middle" fill="#6e7681" font-size="9">np.fromfile + imdecode</text>
+  <text x="122" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">suporte Unicode Windows</text>
+
+  <!-- Step 2 -->
+  <rect x="208" y="254" width="148" height="62" rx="6" fill="#1c2128" stroke="#30363d"/>
+  <text x="282" y="274" text-anchor="middle" fill="#58a6ff" font-size="16">②</text>
+  <text x="282" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">BGR → RGB</text>
+  <text x="282" y="306" text-anchor="middle" fill="#6e7681" font-size="9">cv2.COLOR_BGR2RGB</text>
+  <text x="282" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">padrão TF / Keras</text>
+
+  <!-- Step 3 -->
+  <rect x="368" y="254" width="148" height="62" rx="6" fill="#1c2128" stroke="#30363d"/>
+  <text x="442" y="274" text-anchor="middle" fill="#58a6ff" font-size="16">③</text>
+  <text x="442" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">Resize 224 × 224</text>
+  <text x="442" y="306" text-anchor="middle" fill="#6e7681" font-size="9">INTER_AREA · padrão</text>
+  <text x="442" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">ImageNet / ResNet</text>
+
+  <!-- Step 4 -->
+  <rect x="528" y="254" width="148" height="62" rx="6" fill="#1c2128" stroke="#30363d"/>
+  <text x="602" y="274" text-anchor="middle" fill="#58a6ff" font-size="16">④</text>
+  <text x="602" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">Normalização /255</text>
+  <text x="602" y="306" text-anchor="middle" fill="#6e7681" font-size="9">float32 → [0.0, 1.0]</text>
+  <text x="602" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">estabiliza gradientes</text>
+
+  <!-- Step 5 -->
+  <rect x="688" y="254" width="148" height="62" rx="6" fill="#1c2128" stroke="#30363d"/>
+  <text x="762" y="274" text-anchor="middle" fill="#58a6ff" font-size="16">⑤</text>
+  <text x="762" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">JPEG · qualidade 95</text>
+  <text x="762" y="306" text-anchor="middle" fill="#6e7681" font-size="9">re-encode uniforme</text>
+  <text x="762" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">uniformiza I/O</text>
+
+  <!-- Step 6 -->
+  <rect x="848" y="254" width="204" height="62" rx="6" fill="#132010" stroke="#3fb950"/>
+  <text x="950" y="274" text-anchor="middle" fill="#3fb950" font-size="16">⑥</text>
+  <text x="950" y="292" text-anchor="middle" fill="#e6edf3" font-size="10" font-weight="600">Split Estratificado</text>
+  <text x="950" y="306" text-anchor="middle" fill="#6e7681" font-size="9">70% · 15% · 15%</text>
+  <text x="950" y="317" text-anchor="middle" fill="#6e7681" font-size="8.5">stratify · random_state=42</text>
+
+  <!-- metadata.json row -->
+  <rect x="48" y="328" width="1004" height="78" rx="6" fill="#0d1117" stroke="#21262d"/>
+  <text x="550" y="348" text-anchor="middle" fill="#6e7681" font-size="9.5" font-weight="600">
+    SAÍDA → data/processed/{train | validation | test}/ + metadata.json
+  </text>
+
+  <rect x="62" y="360" width="232" height="34" rx="4" fill="#161b22" stroke="#21262d"/>
+  <text x="178" y="374" text-anchor="middle" fill="#e6edf3" font-size="9" font-weight="600">metadata.json</text>
+  <text x="178" y="386" text-anchor="middle" fill="#6e7681" font-size="8.5">classes · contagens · img_size · seed</text>
+
+  <rect x="306" y="360" width="232" height="34" rx="4" fill="#161b22" stroke="#21262d"/>
+  <text x="422" y="374" text-anchor="middle" fill="#e6edf3" font-size="9" font-weight="600">Contrato de dados entre notebooks</text>
+  <text x="422" y="386" text-anchor="middle" fill="#6e7681" font-size="8.5">lido por notebooks 02, 03 e 04</text>
+
+  <rect x="550" y="360" width="232" height="34" rx="4" fill="#161b22" stroke="#21262d"/>
+  <text x="666" y="374" text-anchor="middle" fill="#e6edf3" font-size="9" font-weight="600">Reprodutibilidade garantida</text>
+  <text x="666" y="386" text-anchor="middle" fill="#6e7681" font-size="8.5">seed fixo (42) em todas as etapas</text>
+
+  <rect x="794" y="360" width="258" height="34" rx="4" fill="#161b22" stroke="#21262d"/>
+  <text x="923" y="374" text-anchor="middle" fill="#e6edf3" font-size="9" font-weight="600">Docs: RELATORIO.md + RELATORIO.pdf</text>
+  <text x="923" y="386" text-anchor="middle" fill="#6e7681" font-size="8.5">justificativas das escolhas · entregável Parte 1</text>
+
+  <!-- Arrow ── PREPROCESSING → DATASETS ── -->
+  <line x1="550" y1="422" x2="550" y2="454" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- ══════════════════════════════════════════
+       DATASETS
+  ══════════════════════════════════════════ -->
+  <!-- Train -->
+  <rect x="30" y="462" width="298" height="76" rx="8" fill="#132010" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="179" y="486" text-anchor="middle" fill="#7ee787" font-size="11" font-weight="700">TREINO</text>
+  <text x="179" y="512" text-anchor="middle" fill="#e6edf3" font-size="28" font-weight="800">649</text>
+  <text x="179" y="530" text-anchor="middle" fill="#6e7681" font-size="9.5">imagens · 70% · shuffle=True · prefetch</text>
+
+  <!-- Validation -->
+  <rect x="401" y="462" width="298" height="76" rx="8" fill="#111a2e" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="550" y="486" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">VALIDAÇÃO</text>
+  <text x="550" y="512" text-anchor="middle" fill="#e6edf3" font-size="28" font-weight="800">139</text>
+  <text x="550" y="530" text-anchor="middle" fill="#6e7681" font-size="9.5">imagens · 15% · shuffle=False</text>
+
+  <!-- Test (sealed) -->
+  <rect x="772" y="462" width="298" height="76" rx="8" fill="#200b0b" stroke="#f47067" stroke-width="2"/>
+  <!-- sealed icon -->
+  <text x="875" y="483" text-anchor="middle" fill="#ffa198" font-size="10" font-weight="700">🔒  TESTE · ISOLADO</text>
+  <text x="921" y="499" text-anchor="middle" fill="#e6edf3" font-size="28" font-weight="800">140</text>
+  <text x="921" y="516" text-anchor="middle" fill="#6e7681" font-size="9">imagens · 15% · nunca visto no treino</text>
+  <text x="921" y="528" text-anchor="middle" fill="#f47067" font-size="8.5" font-weight="600">→ avaliação final exclusiva</text>
+
+  <!-- ══════════════════════════════════════════
+       PARTE 2 LABEL
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="556" width="1040" height="22" rx="4" fill="#1c2128"/>
+  <text x="42" y="567" dominant-baseline="middle"
+        fill="#58a6ff" font-size="10" font-weight="700" letter-spacing="0.8">
+    PARTE 2 · CLASSIFICAÇÃO COM CNN — DUAS ABORDAGENS COMPARADAS
+  </text>
+  <text x="1058" y="567" text-anchor="end" dominant-baseline="middle"
+        fill="#484f58" font-size="10">
+    EarlyStopping (patience=5) + ModelCheckpoint em ambos os modelos
+  </text>
+
+  <!-- Arrows from Train → CNN and ResNet -->
+  <path d="M 179 538 L 179 590 L 260 590" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arr-green)"/>
+  <path d="M 179 538 L 179 605 L 830 605 L 830 590" stroke="#3fb950" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arr-green)"/>
+  <!-- Arrows from Validation → CNN and ResNet -->
+  <path d="M 480 538 L 480 596 L 265 596" stroke="#388bfd" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arr-blue)"/>
+  <path d="M 620 538 L 620 602 L 825 602" stroke="#388bfd" stroke-width="1.5" stroke-dasharray="5,3" fill="none" marker-end="url(#arr-blue)"/>
+
+  <!-- ══════════════════════════════════════════
+       CNN MODEL
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="586" width="498" height="250" rx="10" fill="url(#cnn-bg)" stroke="#1f6feb" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Tab -->
+  <rect x="30" y="576" width="300" height="22" rx="4" fill="#1f6feb"/>
+  <text x="180" y="587" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10.5" font-weight="700">📓 NOTEBOOK 02 · CNN Treinada do Zero</text>
+
+  <!-- Input line -->
+  <rect x="50" y="606" width="458" height="20" rx="3" fill="#0a192f" stroke="#1f6feb" stroke-width="0.5"/>
+  <text x="279" y="616" text-anchor="middle" dominant-baseline="middle"
+        fill="#6e7681" font-size="9">Input 224 × 224 × 3  →  Rescaling(1/255) integrado no grafo do modelo</text>
+
+  <!-- Conv blocks -->
+  <rect x="50" y="636" width="96" height="52" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="98" y="656" text-anchor="middle" fill="#79c0ff" font-size="10" font-weight="700">Conv2D</text>
+  <text x="98" y="671" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="800">32</text>
+  <text x="98" y="683" text-anchor="middle" fill="#6e7681" font-size="8">MaxPool</text>
+
+  <text x="158" y="663" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="166" y="636" width="96" height="52" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="214" y="656" text-anchor="middle" fill="#79c0ff" font-size="10" font-weight="700">Conv2D</text>
+  <text x="214" y="671" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="800">64</text>
+  <text x="214" y="683" text-anchor="middle" fill="#6e7681" font-size="8">MaxPool</text>
+
+  <text x="274" y="663" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="282" y="636" width="96" height="52" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="330" y="656" text-anchor="middle" fill="#79c0ff" font-size="10" font-weight="700">Conv2D</text>
+  <text x="330" y="671" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="800">128</text>
+  <text x="330" y="683" text-anchor="middle" fill="#6e7681" font-size="8">MaxPool</text>
+
+  <text x="390" y="663" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="398" y="636" width="96" height="52" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="446" y="656" text-anchor="middle" fill="#79c0ff" font-size="10" font-weight="700">Conv2D</text>
+  <text x="446" y="671" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="800">256</text>
+  <text x="446" y="683" text-anchor="middle" fill="#6e7681" font-size="8">MaxPool</text>
+
+  <text x="279" y="700" text-anchor="middle" fill="#484f58" font-size="8.5">
+    feature maps: 224 → 112 → 56 → 28 → 14 px
+  </text>
+
+  <!-- Dense layers CNN -->
+  <rect x="50" y="712" width="100" height="48" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="100" y="730" text-anchor="middle" fill="#79c0ff" font-size="9.5" font-weight="700">Flatten</text>
+  <text x="100" y="745" text-anchor="middle" fill="#6e7681" font-size="8.5">50.176</text>
+  <text x="100" y="755" text-anchor="middle" fill="#6e7681" font-size="8">features</text>
+
+  <text x="162" y="736" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="172" y="712" width="100" height="48" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="222" y="730" text-anchor="middle" fill="#79c0ff" font-size="9.5" font-weight="700">Dense(512)</text>
+  <text x="222" y="748" text-anchor="middle" fill="#6e7681" font-size="8.5">ReLU</text>
+
+  <text x="284" y="736" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="294" y="712" width="100" height="48" rx="5" fill="#0f2540" stroke="#1f6feb"/>
+  <text x="344" y="730" text-anchor="middle" fill="#79c0ff" font-size="9.5" font-weight="700">Dropout</text>
+  <text x="344" y="748" text-anchor="middle" fill="#6e7681" font-size="8.5">0.5</text>
+
+  <text x="406" y="736" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="416" y="712" width="96" height="48" rx="5" fill="#c70040" stroke="#ed145b"/>
+  <text x="464" y="730" text-anchor="middle" fill="white" font-size="9.5" font-weight="700">Dense(4)</text>
+  <text x="464" y="748" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">Softmax</text>
+
+  <!-- CNN hyperparams -->
+  <rect x="50" y="772" width="458" height="48" rx="4" fill="#0a0f16" stroke="#21262d"/>
+  <text x="279" y="790" text-anchor="middle" fill="#6e7681" font-size="9">Adam (lr = 1e-3)  ·  sparse_categorical_crossentropy</text>
+  <text x="279" y="804" text-anchor="middle" fill="#6e7681" font-size="9">EarlyStopping patience=5 · restore_best_weights=True</text>
+  <text x="279" y="816" text-anchor="middle" fill="#6e7681" font-size="9">→  trained_models/cnn_best.keras</text>
+
+  <!-- ══════════════════════════════════════════
+       RESNET MODEL
+  ══════════════════════════════════════════ -->
+  <rect x="572" y="586" width="498" height="250" rx="10" fill="url(#res-bg)" stroke="#2ea043" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Tab -->
+  <rect x="572" y="576" width="340" height="22" rx="4" fill="#2ea043"/>
+  <text x="742" y="587" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10.5" font-weight="700">📓 NOTEBOOK 03 · ResNet50 Transfer Learning</text>
+
+  <!-- Input line ResNet -->
+  <rect x="592" y="606" width="458" height="20" rx="3" fill="#091509" stroke="#2ea043" stroke-width="0.5"/>
+  <text x="821" y="616" text-anchor="middle" dominant-baseline="middle"
+        fill="#6e7681" font-size="9">Input 224 × 224 × 3  →  ResNet50Preprocess()  ·  subtração médias ImageNet por canal</text>
+
+  <!-- ResNet base block -->
+  <rect x="592" y="636" width="220" height="52" rx="5" fill="#0b1f0b" stroke="#2ea043"/>
+  <text x="702" y="655" text-anchor="middle" fill="#7ee787" font-size="10" font-weight="700">ResNet50 (congelada)</text>
+  <text x="702" y="670" text-anchor="middle" fill="#6e7681" font-size="8.5">weights = imagenet</text>
+  <text x="702" y="682" text-anchor="middle" fill="#6e7681" font-size="8">25,6M params pré-treinados</text>
+
+  <text x="824" y="663" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="834" y="636" width="196" height="52" rx="5" fill="#0b1f0b" stroke="#2ea043"/>
+  <text x="932" y="654" text-anchor="middle" fill="#7ee787" font-size="10" font-weight="700">GlobalAvgPool2D</text>
+  <text x="932" y="669" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="800">2.048</text>
+  <text x="932" y="682" text-anchor="middle" fill="#6e7681" font-size="8">features · invariância espacial</text>
+
+  <text x="821" y="700" text-anchor="middle" fill="#484f58" font-size="8.5">
+    Flatten geraria 100.352 features — GlobalAvgPool é mais robusto para transfer learning
+  </text>
+
+  <!-- Dense layers ResNet -->
+  <rect x="592" y="712" width="116" height="48" rx="5" fill="#0b1f0b" stroke="#2ea043"/>
+  <text x="650" y="730" text-anchor="middle" fill="#7ee787" font-size="9.5" font-weight="700">Dense(256)</text>
+  <text x="650" y="748" text-anchor="middle" fill="#6e7681" font-size="8.5">ReLU · adaptador</text>
+
+  <text x="720" y="736" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="730" y="712" width="110" height="48" rx="5" fill="#0b1f0b" stroke="#2ea043"/>
+  <text x="785" y="730" text-anchor="middle" fill="#7ee787" font-size="9.5" font-weight="700">Dropout</text>
+  <text x="785" y="748" text-anchor="middle" fill="#6e7681" font-size="8.5">0.5</text>
+
+  <text x="852" y="736" text-anchor="middle" fill="#484f58" font-size="18">›</text>
+
+  <rect x="862" y="712" width="110" height="48" rx="5" fill="#c70040" stroke="#ed145b"/>
+  <text x="917" y="730" text-anchor="middle" fill="white" font-size="9.5" font-weight="700">Dense(4)</text>
+  <text x="917" y="748" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">Softmax</text>
+
+  <!-- ResNet hyperparams -->
+  <rect x="592" y="772" width="458" height="48" rx="4" fill="#0a0f16" stroke="#21262d"/>
+  <text x="821" y="790" text-anchor="middle" fill="#6e7681" font-size="9">Adam (lr = 1e-4)  ·  sparse_categorical_crossentropy</text>
+  <text x="821" y="804" text-anchor="middle" fill="#6e7681" font-size="9">lr reduzido: preserva pesos ImageNet  ·  restore_best_weights=True</text>
+  <text x="821" y="816" text-anchor="middle" fill="#6e7681" font-size="9">→  trained_models/resnet50_best.keras</text>
+
+  <!-- VS badge -->
+  <rect x="524" y="700" width="44" height="28" rx="14" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+  <text x="546" y="714" text-anchor="middle" dominant-baseline="middle"
+        fill="#e6edf3" font-size="11" font-weight="700">VS</text>
+
+  <!-- Arrows from Models → Evaluation -->
+  <path d="M 279 836 L 279 900 L 490 900" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#arr-blue)"/>
+  <path d="M 821 836 L 821 900 L 610 900" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#arr-blue)"/>
+
+  <!-- Test Set arrow to Evaluation (sealed) -->
+  <path d="M 921 538 L 921 560 L 1072 560 L 1072 918 L 1030 918"
+        stroke="#f47067" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arr-red)"/>
+  <text x="1080" y="738" text-anchor="middle" fill="#f47067" font-size="8.5"
+        transform="rotate(90, 1080, 738)">conjunto de teste isolado</text>
+
+  <!-- ══════════════════════════════════════════
+       EVALUATION
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="908" width="1040" height="110" rx="10" fill="#161b22" stroke="#388bfd" stroke-width="1.5"/>
+  <!-- Tab -->
+  <rect x="30" y="898" width="430" height="22" rx="4" fill="#388bfd"/>
+  <text x="215" y="909" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10.5" font-weight="700">
+    📊 AVALIAÇÃO NO CONJUNTO DE TESTE (140 imagens · nunca vistas no treino ou validação)
+  </text>
+
+  <!-- Metric chips -->
+  <rect x="48" y="926" width="162" height="78" rx="6" fill="#111a2e" stroke="#388bfd"/>
+  <text x="129" y="950" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">ACURÁCIA</text>
+  <text x="129" y="966" text-anchor="middle" fill="#6e7681" font-size="9">proporção global de acertos</text>
+  <text x="129" y="978" text-anchor="middle" fill="#6e7681" font-size="8.5">model.evaluate(test_ds)</text>
+  <text x="129" y="996" text-anchor="middle" fill="#484f58" font-size="8">CNN vs. ResNet50</text>
+
+  <rect x="222" y="926" width="162" height="78" rx="6" fill="#111a2e" stroke="#388bfd"/>
+  <text x="303" y="948" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">MATRIX DE</text>
+  <text x="303" y="962" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">CONFUSÃO</text>
+  <text x="303" y="978" text-anchor="middle" fill="#6e7681" font-size="8.5">erros por classe</text>
+  <text x="303" y="991" text-anchor="middle" fill="#6e7681" font-size="8.5">ConfusionMatrixDisplay</text>
+
+  <rect x="396" y="926" width="162" height="78" rx="6" fill="#111a2e" stroke="#388bfd"/>
+  <text x="477" y="950" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">PRECISÃO</text>
+  <text x="477" y="966" text-anchor="middle" fill="#6e7681" font-size="9">TP / (TP + FP)</text>
+  <text x="477" y="980" text-anchor="middle" fill="#6e7681" font-size="8.5">minimiza alarmes falsos</text>
+
+  <rect x="570" y="926" width="162" height="78" rx="6" fill="#200b0b" stroke="#f47067" stroke-width="1.5"/>
+  <text x="651" y="944" text-anchor="middle" fill="#ffa198" font-size="11" font-weight="700">RECALL · IAM</text>
+  <text x="651" y="958" text-anchor="middle" fill="#ffa198" font-size="9" font-weight="600">⚠ métrica crítica</text>
+  <text x="651" y="973" text-anchor="middle" fill="#6e7681" font-size="9">TP / (TP + FN)</text>
+  <text x="651" y="986" text-anchor="middle" fill="#f47067" font-size="8.5">FN = risco clínico real</text>
+  <text x="651" y="998" text-anchor="middle" fill="#6e7681" font-size="8">não perder nenhum infarto</text>
+
+  <rect x="744" y="926" width="162" height="78" rx="6" fill="#111a2e" stroke="#388bfd"/>
+  <text x="825" y="950" text-anchor="middle" fill="#79c0ff" font-size="11" font-weight="700">F1-SCORE</text>
+  <text x="825" y="966" text-anchor="middle" fill="#6e7681" font-size="9">2 × P × R / (P + R)</text>
+  <text x="825" y="980" text-anchor="middle" fill="#6e7681" font-size="8.5">classes desbalanceadas</text>
+
+  <rect x="918" y="926" width="130" height="78" rx="6" fill="#0d1f0d" stroke="#2ea043"/>
+  <text x="983" y="946" text-anchor="middle" fill="#7ee787" font-size="9.5" font-weight="700">classification</text>
+  <text x="983" y="960" text-anchor="middle" fill="#7ee787" font-size="9.5" font-weight="700">_report</text>
+  <text x="983" y="976" text-anchor="middle" fill="#6e7681" font-size="8.5">scikit-learn 1.9</text>
+  <text x="983" y="989" text-anchor="middle" fill="#6e7681" font-size="8">por classe + avg</text>
+
+  <!-- Arrow Evaluation → Prototype -->
+  <line x1="550" y1="1018" x2="550" y2="1048" stroke="#9C27B0" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- ══════════════════════════════════════════
+       PROTOTYPE
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="1056" width="1040" height="108" rx="10" fill="#1e1332" stroke="#9C27B0" stroke-width="1.5"/>
+  <!-- Tab -->
+  <rect x="30" y="1046" width="340" height="22" rx="4" fill="#9C27B0"/>
+  <text x="200" y="1057" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10.5" font-weight="700">📓 NOTEBOOK 04 · Protótipo Interativo — ipywidgets</text>
+
+  <!-- UI elements -->
+  <rect x="50" y="1072" width="214" height="28" rx="4" fill="#2a1a4e" stroke="#7B1FA2"/>
+  <text x="157" y="1086" text-anchor="middle" dominant-baseline="middle"
+        fill="#CE93D8" font-size="9.5">Modelo:  [ CNN do zero ▼ ]</text>
+
+  <rect x="276" y="1072" width="274" height="28" rx="4" fill="#2a1a4e" stroke="#7B1FA2"/>
+  <text x="413" y="1086" text-anchor="middle" dominant-baseline="middle"
+        fill="#CE93D8" font-size="9.5">ECG selecionado:  [ HB(105).jpg ▼ ]</text>
+
+  <rect x="562" y="1072" width="134" height="28" rx="4" fill="#9C27B0"/>
+  <text x="629" y="1086" text-anchor="middle" dominant-baseline="middle"
+        fill="white" font-size="10" font-weight="700">  Analisar ECG</text>
+
+  <rect x="708" y="1072" width="344" height="28" rx="4" fill="#132010" stroke="#2ea043"/>
+  <text x="880" y="1086" text-anchor="middle" dominant-baseline="middle"
+        fill="#7ee787" font-size="9.5">Resultado: normal  ·  Confiança: 71%</text>
+
+  <!-- Probability bars -->
+  <text x="50" y="1120" fill="#6e7681" font-size="9">■■■■■■■■■■■░░░  Normal (71%)</text>
+  <text x="290" y="1120" fill="#6e7681" font-size="9">■■■░░░░░░░░░░░  Anormal (18%)</text>
+  <text x="530" y="1120" fill="#6e7681" font-size="9">■░░░░░░░░░░░░░  IAM (7%)</text>
+  <text x="730" y="1120" fill="#6e7681" font-size="9">░░░░░░░░░░░░░░  Pós-IAM (4%)</text>
+  <text x="940" y="1120" fill="#484f58" font-size="8.5">imagem + barras por classe</text>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="1182" width="1040" height="26" rx="4" fill="#21262d"/>
+  <text x="550" y="1195" text-anchor="middle" dominant-baseline="middle"
+        fill="#6e7681" font-size="9.5">
+    ⚠  Projeto acadêmico · não utilizar para diagnóstico clínico real · toda interpretação de ECG deve ser realizada por profissional de saúde habilitado
+  </text>
+
+  <!-- ══════════════════════════════════════════
+       LEGEND
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="1220" width="1040" height="54" rx="6" fill="#0d1117" stroke="#21262d"/>
+  <text x="46" y="1237" fill="#484f58" font-size="9" font-weight="600">LEGENDA</text>
+
+  <rect x="110" y="1228" width="12" height="12" rx="2" fill="#FF9800"/><text x="128" y="1238" fill="#6e7681" font-size="8.5">Batimento Anormal</text>
+  <rect x="245" y="1228" width="12" height="12" rx="2" fill="#9C27B0"/><text x="263" y="1238" fill="#6e7681" font-size="8.5">Pós-Infarto</text>
+  <rect x="350" y="1228" width="12" height="12" rx="2" fill="#f47067"/><text x="368" y="1238" fill="#6e7681" font-size="8.5">IAM (crítico)</text>
+  <rect x="455" y="1228" width="12" height="12" rx="2" fill="#3fb950"/><text x="473" y="1238" fill="#6e7681" font-size="8.5">Normal</text>
+  <rect x="535" y="1228" width="12" height="12" rx="2" fill="#1f6feb"/><text x="553" y="1238" fill="#6e7681" font-size="8.5">CNN do Zero</text>
+  <rect x="645" y="1228" width="12" height="12" rx="2" fill="#2ea043"/><text x="663" y="1238" fill="#6e7681" font-size="8.5">Transfer Learning</text>
+  <rect x="780" y="1228" width="12" height="12" rx="2" fill="#388bfd"/><text x="798" y="1238" fill="#6e7681" font-size="8.5">Avaliação</text>
+  <rect x="865" y="1228" width="12" height="12" rx="2" fill="#9C27B0"/><text x="883" y="1238" fill="#6e7681" font-size="8.5">Protótipo</text>
+
+  <text x="46" y="1264" fill="#30363d" font-size="8.5">
+    ── ─ ──  fluxo de treino/validação (datasets de suporte)     ── ─ ──  fluxo do teste isolado (avaliação final)     ──────  fluxo principal do pipeline
+  </text>
+
+</svg>
